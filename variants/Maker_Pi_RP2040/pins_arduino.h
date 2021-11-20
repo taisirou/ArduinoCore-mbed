@@ -53,6 +53,8 @@ extern PinName digitalPinToPinName(pin_size_t P);
 #define PIN_A2 (28u)
 #define PIN_A3 (29u)
 
+#define ADC3  (29u)
+
 static const uint8_t A0  = PIN_A0;
 static const uint8_t A1  = PIN_A1;
 static const uint8_t A2  = PIN_A2;
@@ -80,8 +82,6 @@ static const uint8_t A3  = PIN_A3;
 
 uint8_t getUniqueSerialNumber(uint8_t* name);
 void _ontouch1200bps_();
-
-
 
 #define WIRE_HOWMANY	(1)
 #define I2C_SDA			(digitalPinToPinName(PIN_WIRE_SDA))
