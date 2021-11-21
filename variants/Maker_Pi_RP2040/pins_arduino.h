@@ -70,6 +70,9 @@ static const uint8_t A3  = PIN_A3;
 #define PIN_WIRE_SDA        (2u)
 #define PIN_WIRE_SCL        (3u)
 
+#define PIN_WIRE_SDA1       (4u)
+#define PIN_WIRE_SCL1       (5u)
+
 #define SERIAL_HOWMANY		1
 #define SERIAL1_TX			(digitalPinToPinName(PIN_SERIAL_TX))
 #define SERIAL1_RX			(digitalPinToPinName(PIN_SERIAL_RX))
@@ -83,9 +86,11 @@ static const uint8_t A3  = PIN_A3;
 uint8_t getUniqueSerialNumber(uint8_t* name);
 void _ontouch1200bps_();
 
-#define WIRE_HOWMANY	(1)
+#define WIRE_HOWMANY	(2)
 #define I2C_SDA			(digitalPinToPinName(PIN_WIRE_SDA))
 #define I2C_SCL			(digitalPinToPinName(PIN_WIRE_SCL))
+#define I2C_SDA1			(digitalPinToPinName(PIN_WIRE_SDA1))
+#define I2C_SCL1			(digitalPinToPinName(PIN_WIRE_SCL1))
 
 #define digitalPinToPort(P)		(digitalPinToPinName(P)/32)
 
