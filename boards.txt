@@ -428,3 +428,46 @@ pico.bootloader.config=-f target/rp2040.cfg
 pico.bootloader.programmer=-f interface/cmsis-dap.cfg
 
 ##############################################################
+mkpi.name=Maker Pi RP2040
+mkpi.build.core=arduino
+mkpi.build.crossprefix=arm-none-eabi-
+mkpi.build.compiler_path={runtime.tools.arm-none-eabi-gcc-7-2017q4.path}/bin/
+
+mkpi.build.variant=Maker_Pi_RP2040
+mkpi.build.mcu=cortex-m0plus
+mkpi.build.extra_flags=
+mkpi.build.fpu=
+mkpi.build.float-abi=
+mkpi.build.architecture=cortex-m0plus
+mkpi.build.board=Maker_Pi_RP2040
+mkpi.build.ldscript=linker_script.ld
+mkpi.compiler.mbed.arch.define=-DARDUINO_ARCH_RP2040
+mkpi.compiler.mbed.defines={build.variant.path}/defines.txt
+mkpi.compiler.mbed.ldflags={build.variant.path}/ldflags.txt
+mkpi.compiler.mbed.cflags={build.variant.path}/cflags.txt
+mkpi.compiler.mbed.cxxflags={build.variant.path}/cxxflags.txt
+mkpi.compiler.mbed.includes={build.variant.path}/includes.txt
+mkpi.compiler.mbed.extra_ldflags=-lstdc++ -lsupc++ -lm -lc -lgcc -lnosys
+mkpi.compiler.mbed="{build.variant.path}/libs/libmbed.a"
+mkpi.vid.0=0x2e8a
+mkpi.pid.0=0x00C0
+mkpi.upload_port.0.vid=0x2e8a
+mkpi.upload_port.0.pid=0x00C0
+
+mkpi.upload.tool=picotool
+mkpi.upload.tool.default=picotool
+mkpi.upload.protocol=
+mkpi.upload.transport=
+mkpi.upload.use_1200bps_touch=true
+mkpi.upload.wait_for_upload_port=false
+mkpi.upload.native_usb=true
+mkpi.upload.maximum_size=16777216
+mkpi.upload.maximum_data_size=270336
+
+mkpi.bootloader.tool=openocd
+mkpi.bootloader.tool.default=openocd
+mkpi.bootloader.config=-f target/rp2040.cfg
+mkpi.bootloader.programmer=-f interface/cmsis-dap.cfg
+
+##############################################################
+
