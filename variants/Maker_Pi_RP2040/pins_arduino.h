@@ -20,8 +20,9 @@ extern PinName digitalPinToPinName(pin_size_t P);
 
 // LEDs
 // ----
-#define PIN_LED     (18u)
+#define PIN_LED     (7u)
 #define LED_BUILTIN PIN_LED
+#define RGB     (18u)
 
 // SwitchS
 // ----
